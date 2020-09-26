@@ -1,0 +1,84 @@
+<style>
+    div.header1{
+        width: 90%;
+        height: 10%;
+        text-align: center;
+        margin: auto;
+        padding: 3%;
+        background-color: indianred;
+        border-radius: 20px;
+    }
+    h1 {
+        color: cornsilk;
+        align-content: center;
+    }
+    h3 {
+        color: lightyellow;
+        align-content: center;
+    }
+    div.form{
+
+        width: 90%;
+        height: 90%;
+        text-align: center;
+        margin: auto;
+        padding-left: 3%;
+        padding-right: 3%;
+        background-color: lightgrey;
+        border-radius: 20px;
+
+    }
+    div.form_main{
+
+        width: 50%;
+        height: 80%;
+        text-align: left;
+        margin: auto;
+        padding-top: 3%;
+        background-color: lightgrey;
+        color: #333333;
+
+    }
+
+</style>
+
+<html>
+    <head>
+        <div class = 'header1'>
+            <h1>Diabetes Check</h1>
+            <h3>Input the details below and we will let you know whether you may have diabetes or not!</h3>
+        </div>
+
+    </head>
+    <body>
+        <div class = "form">
+            <div class = "form_main">
+            <form action = "http://localhost:5000/result" method = "POST">
+                <p>Have you ever been pregnant? If yes, Please indicate the number of times</p>
+                <input type = "text" name = "Pregnant" />
+
+                <p>Please indicate your glucose levels (mg/dL) [Range: 70 - 200] </p>
+                <input type = "text" name = "Glucose" />
+
+                <p>Please indicate your blood pressure [Range: 40 - 160]</p>
+                <input type = "text" name = "bp" />
+
+                <p>Please indicate your insulin level (mIU/L)</p>
+                <input type ="text" name = "insulin" />
+
+                <p>Please indicate your BMI </p>
+                <input type ="text" name = "BMI" />
+
+                <p>Please indicate your Diabetes Pedigree Function </p>
+                <input type ="text" name = "DPF" />
+
+                <p>Please enter your age </p>
+                <input type ="text" name = "Age" />
+
+                <p><input type = "submit" value = "submit" /></p>
+            </form>
+            </div>
+        </div>
+
+   </body>
+</html>

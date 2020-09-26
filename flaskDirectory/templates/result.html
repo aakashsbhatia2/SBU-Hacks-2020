@@ -1,0 +1,55 @@
+<!doctype html>
+
+<style>
+    div.header1{
+        width: 90%;
+        height: 10%;
+        text-align: center;
+        margin: auto;
+        padding: 3%;
+        background-color: maroon;
+        border-radius: 20px;
+    }
+    h1 {
+        color: cornsilk;
+        align-content: center;
+    }
+    div.form {
+
+       width: 90%;
+       height: 90%;
+       text-align: center;
+       margin: auto;
+       padding: 3%;
+       background-color: oldlace;
+       border-radius: 20px;
+       text-align: center;
+
+    }
+</style>
+
+<html>
+   <head>
+        <div class = 'header1'>
+            <h1>Diabetes Checker</h1>
+        </div>
+   </head>
+   <body>
+   <div class="form">
+
+      <table >
+         {% for key, value in result.items() %}
+            <tr>
+               <th> {{ key }} </th>
+                {% if value == 0 %}
+               <td> No </td>
+               {% endif %}
+               {% if value == 1 %}
+               <td> Yes </td>
+               {% endif %}
+            </tr>
+         {% endfor %}
+      </table>
+   </div>
+   </body>
+</html>
